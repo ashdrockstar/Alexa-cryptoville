@@ -1,0 +1,7 @@
+CallFarmIntent {Farm}
+CallFarmIntent tell me about {Farm}
+CallFarmIntent talk about {Farm}
+CallFarmIntent tell me some facts about {Farm}
+AMAZON.HelpIntent tell me those names again
+AMAZON.HelpIntent tell me the Farm names
+AMAZON.HelpIntent what are the Farm names again
