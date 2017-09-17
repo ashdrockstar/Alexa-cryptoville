@@ -8,111 +8,113 @@
  * For additional samples, visit the Alexa Skills Kit Getting Started guide at
  * http://amzn.to/1LGWsLG
  */
-var request = require("request")
 
 var farms = {
     "apple": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Apples are extremely rich in important antioxidants, flavanoids, and dietary fiber." +
+        "The phytonutrients and antioxidants in apples may help reduce the risk of developing cancer, hypertension, diabetes, and heart disease.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "apricot": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Apricot is rich in vitamins like beta-carotene, Vitamin A, C, E and K." +
+        "It is rich in minerals like iron, potassium, manganese, magnesium, phosphorus." +
+        "It is also a good source of antioxidants, dietary fiber and flavonoids",
         // "price" : "$10",
     // "state" : "NY"
 },
     "avacado": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Also known as an alligator pear or butter fruit, the versatile avocado is the only fruit that provides a substantial amount of healthy monounsaturated fatty acids (MUFA). Avocados are a naturally nutrient-dense food and contain nearly 20 vitamins and minerals.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "banana": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "It is loaded with essential vitamins and minerals such as potassium, calcium, manganese, magnesium, iron, folate, niacin, riboflavin, and B6. The high content of potassium in bananas makes it a super fruit.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "cherry": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "The antioxidant activity of tart cherries was found superior to that of vitamin E and comparable to commercially available antioxidant products",
         // "price" : "$10",
     // "state" : "NY"
 },
     "citrus": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Citrus fruits have the advantage of containing several different antioxidants that may help prevent a range of health concerns, from cardiovascular disease and cancer to skin damage from sunlight",
         // "price" : "$10",
     // "state" : "NY"
 },
     "coconut": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Coconut milk is produced by mixing or blending the flesh or meat of the fruit and the water. The water is low in calories and full of electrolytes, while the milk contains more nutrients and calories.",
         // "price" : "$10",
     // "state" : "NY"
 },
-    "cragonFruit": {
-        "personality_trait": "sweet and healthy",
+    "dragonFruit": {
+        "personality_trait": "Dragon fruits have a surprising number of phytonutrients. Rich in antioxidants, they contain vitamin C (equivalent to 10 percent of the daily value), polyunsaturated (good) fatty acids, and several B vitamins for carbohydrate metabolism, as well as carotene and protein.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "durian": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "It contains vitamin C, folic acid, thiamin, riboflavin, niacin, B6 and vitamin A. Important minerals such as potassium, iron, calcium, magnesium, sodium, zinc, phosphorus are found in durian.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "grapes": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Grapes contain powerful antioxidants known as polyphenols, which may slow or prevent many types of cancer, including esophageal, lung, mouth, pharynx, endometrial, pancreatic, prostate and colon.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "kiwi": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Their green flesh is sweet and tangy. It's also full of nutrients like vitamin C, vitamin K, vitamin E, folate, and potassium. They also have a lot of antioxidants and are a good source of fiber.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "melon": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "The high content of carotenoids in melon fruit can prevent cancer and lower the risk of lung cancer.The excellent diuretic properties of melon are beneficial in curing kidney disease. The combination of melon and lemon is effective in curing gout.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "orange": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "One orange provides a range of vitamins and minerals; a staggering 130 percent of your vitamin C needs for the day. According to the American Heart Association, eating higher amounts of a compound found in citrus fruits like oranges and grapefruit may lower ischemic stroke risk for women.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "papaya": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Zeaxanthin, an antioxidant found in papaya, filters out harmful blue light rays; it is thought to play a protective role in eye health, and may ward off macular degeneration.Consuming the antioxidant beta-carotene, found in papayas, may reduce cancer risk.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "pear": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "One pear contains up to 11 percent of our daily recommended intake of vitamin C and 9.5 percent of our daily recommended intake of copper. Pears are also said to have more nutrients per calorie than calorie per nutrient.",
         // "price" : "$10",
     // "state" : "NY"
 },
-    "pineapple": {
-        "personality_trait": "sweet and healthy",
+     "pineapple": {
+        "personality_trait": "Pineapples may help in a range of conditions, including asthma and diabetes. One cup of pineapple contains 82 calories and 131 percent of daily vitamin C needs",
         // "price" : "$10",
     // "state" : "NY"
 },
-    "plum": {
-        "personality_trait": "sweet and healthy",
+     "plum": {
+        "personality_trait": "Yummy, succulent plums only have 46 calories per 100 g, contain no saturated fats and are full of minerals and vitamins.Plums and prunes help increase the absorption of iron into the body, which may be due to the fact that they are a good source of vitamin C.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "pomegranate": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Pomegranates have anti-oxidant, anti-viral and anti-tumor properties and are said to be a good source of vitamins, especially vitamin A, vitamin C, and vitamin E, as well as folic acid. ",
         // "price" : "$10",
     // "state" : "NY"
 },
     "raspberry": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Red Raspberries contain strong antioxidants such as Vitamin C, quercetin and gallic acid that fight against cancer, heart and circulatory disease and age-related decline.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "strawberry": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "The red coloring contains anthocyanins, which stimulate the burning of stored fat. When a group of animals was fed a high-fat diet along with anthocyanins, they gained 24 percent less weight than the animals eating the high-fat diet without added anthocyanins.",
         // "price" : "$10",
     // "state" : "NY"
 },
     "watermelon": {
-        "personality_trait": "sweet and healthy",
+        "personality_trait": "Watermelons are mostly water about 92 percent but this refreshing fruit is soaked with nutrients. Each juicy bite has significant levels of vitamins A, B6 and C, lots of lycopene, antioxidants and amino acids.",
         // "price" : "$10",
         // "state" : "NY"
     }
@@ -157,8 +159,7 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
     const cardTitle = 'Welcome';
-    const speechOutput = 'Welcome to the CryptoVille Farms. Purchase everything within your cryptoBudget.' +
-        'We have Apples, Oranges, Bananas and many more. Dont miss out the opportunity.';
+    const speechOutput = 'Welcome to the CryptoVille Farms. A universal platform to sell or buy agricultural goods without any human interference.';
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Which Produce would you like to know about?';
@@ -199,19 +200,13 @@ function SetProduceIntent(intent, session, callback) {
     let speechOutput = 'We have an Error';
     if(farms[farm]){
    
-       speechOutput = `Sharing information about ${farm}. Personality_trait, ${farms[farm].personality_trait}. `
+       speechOutput = `Sharing information about ${farm}. ${farms[farm].personality_trait}. `
 
        // +`Current Price, ${tempData}. Available in ${farms[farm].state} state.`;
         
             repromptText = "What else do you want to know?";
 
-            var request = require('request');
-        request('http://www.google.com', function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred 
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-  console.log('body:', body); // Print the HTML for the Google homepage. 
-});
-        speechOutput = body
+
             callback(sessionAttributes,
          buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
         }
